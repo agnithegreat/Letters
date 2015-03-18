@@ -1,0 +1,531 @@
+{
+    "letters": {
+        "g": {
+            "name": "g",
+            "letter": "Г",
+            "color": "#9fc5e8"
+        },
+        "k": {
+            "name": "k",
+            "letter": "К",
+            "color": "#e06666"
+        },
+        "l2": {
+            "name": "l2",
+            "letter": "Л",
+            "color": "#ffe599"
+        },
+        "m": {
+            "name": "m",
+            "letter": "М",
+            "color": "#f9cb9c"
+        },
+        "p": {
+            "name": "p",
+            "letter": "П",
+            "color": "#dd7e6b"
+        },
+        "s": {
+            "name": "s",
+            "letter": "С",
+            "color": "#b4a7d6"
+        }
+    },
+    "words": {
+        "g.1": {
+            "name": "g.1",
+            "letter": "g",
+            "word": "Гитара",
+            "value": "soft",
+            "position": "344,28",
+            "folder": "Звук Г",
+            "filename": "Гитара.png"
+        },
+        "g.2": {
+            "name": "g.2",
+            "letter": "g",
+            "word": "Гора",
+            "value": "strong",
+            "position": "54,597",
+            "folder": "Звук Г",
+            "filename": "Гора.png"
+        },
+        "g.3": {
+            "name": "g.3",
+            "letter": "g",
+            "word": "Гриб",
+            "value": "strong",
+            "position": "802,287",
+            "folder": "Звук Г",
+            "filename": "Гриб.png"
+        },
+        "g.4": {
+            "name": "g.4",
+            "letter": "g",
+            "word": "Гусь",
+            "value": "strong",
+            "position": "1186,28",
+            "folder": "Звук Г",
+            "filename": "Гусь.png"
+        },
+        "g.5": {
+            "name": "g.5",
+            "letter": "g",
+            "word": "Кенгуру",
+            "value": "strong",
+            "position": "524,673",
+            "folder": "Звук Г",
+            "filename": "Кенгуру.png"
+        },
+        "g.6": {
+            "name": "g.6",
+            "letter": "g",
+            "word": "Книги",
+            "value": "soft",
+            "position": "1498,511",
+            "folder": "Звук Г",
+            "filename": "Книги.png"
+        },
+        "g.7": {
+            "name": "g.7",
+            "letter": "g",
+            "word": "Снегирь",
+            "value": "soft",
+            "position": "1036,813",
+            "folder": "Звук Г",
+            "filename": "Снегирь.png"
+        },
+        "k.1": {
+            "name": "k.1",
+            "letter": "k",
+            "word": "Брюки",
+            "value": "soft",
+            "position": "1585,736",
+            "folder": "Звук К",
+            "filename": "Брюки.png"
+        },
+        "k.2": {
+            "name": "k.2",
+            "letter": "k",
+            "word": "Кенгуру",
+            "value": "soft",
+            "position": "495,654",
+            "folder": "Звук К",
+            "filename": "Кенгуру.png"
+        },
+        "k.3": {
+            "name": "k.3",
+            "letter": "k",
+            "word": "Кисть",
+            "value": "soft",
+            "position": "994,782",
+            "folder": "Звук К",
+            "filename": "Кисть.png"
+        },
+        "k.4": {
+            "name": "k.4",
+            "letter": "k",
+            "word": "Кит",
+            "value": "soft",
+            "position": "1209,324",
+            "folder": "Звук К",
+            "filename": "Кит.png"
+        },
+        "k.5": {
+            "name": "k.5",
+            "letter": "k",
+            "word": "Клоун",
+            "value": "strong",
+            "position": "20,486",
+            "folder": "Звук К",
+            "filename": "Клоун.png"
+        },
+        "k.6": {
+            "name": "k.6",
+            "letter": "k",
+            "word": "Кукла",
+            "value": "strong",
+            "position": "727,68",
+            "folder": "Звук К",
+            "filename": "Кукла.png"
+        },
+        "k.7": {
+            "name": "k.7",
+            "letter": "k",
+            "word": "Курица",
+            "value": "strong",
+            "position": "325,37",
+            "folder": "Звук К",
+            "filename": "Курица.png"
+        },
+        "k.8": {
+            "name": "k.8",
+            "letter": "k",
+            "word": "Лягушка",
+            "value": "strong",
+            "position": "809,547",
+            "folder": "Звук К",
+            "filename": "Лягушка.png"
+        },
+        "k.9": {
+            "name": "k.9",
+            "letter": "k",
+            "word": "Очки",
+            "value": "soft",
+            "position": "1138,17",
+            "folder": "Звук К",
+            "filename": "Очки.png"
+        },
+        "l.1": {
+            "name": "l.1",
+            "letter": "l",
+            "word": "Верблюд",
+            "value": "soft",
+            "position": "36,538",
+            "folder": "Звук Л",
+            "filename": "Верблюд.png"
+        },
+        "l.2": {
+            "name": "l.2",
+            "letter": "l",
+            "word": "Волк",
+            "value": "strong",
+            "position": "1342,442",
+            "folder": "Звук Л",
+            "filename": "Волк.png"
+        },
+        "l.3": {
+            "name": "l.3",
+            "letter": "l",
+            "word": "Крокодил",
+            "value": "strong",
+            "position": "291,0",
+            "folder": "Звук Л",
+            "filename": "Крокодил.png"
+        },
+        "l.4": {
+            "name": "l.4",
+            "letter": "l",
+            "word": "Леопард",
+            "value": "soft",
+            "position": "827,216",
+            "folder": "Звук Л",
+            "filename": "Леопард.png"
+        },
+        "l.5": {
+            "name": "l.5",
+            "letter": "l",
+            "word": "Лось",
+            "value": "strong",
+            "position": "1096,0",
+            "folder": "Звук Л",
+            "filename": "Лось.png"
+        },
+        "l.6": {
+            "name": "l.6",
+            "letter": "l",
+            "word": "Лошадь",
+            "value": "strong",
+            "position": "932,648",
+            "folder": "Звук Л",
+            "filename": "Лошадь.png"
+        },
+        "l.7": {
+            "name": "l.7",
+            "letter": "l",
+            "word": "Цапля",
+            "value": "soft",
+            "position": "460,668",
+            "folder": "Звук Л",
+            "filename": "Цапля.png"
+        },
+        "l2.1": {
+            "name": "l2.1",
+            "letter": "l2",
+            "word": "Велосипед",
+            "value": "strong",
+            "position": "1057,10",
+            "folder": "Звук Л2",
+            "filename": "Велосипед.png"
+        },
+        "l2.2": {
+            "name": "l2.2",
+            "letter": "l2",
+            "word": "Качели",
+            "value": "soft",
+            "position": "1391,479",
+            "folder": "Звук Л2",
+            "filename": "Качели.png"
+        },
+        "l2.3": {
+            "name": "l2.3",
+            "letter": "l2",
+            "word": "Колокольчик",
+            "value": "soft",
+            "position": "980,683",
+            "folder": "Звук Л2",
+            "filename": "Колокольчик.png"
+        },
+        "l2.4": {
+            "name": "l2.4",
+            "letter": "l2",
+            "word": "Лимон",
+            "value": "soft",
+            "position": "302,10",
+            "folder": "Звук Л2",
+            "filename": "Лимон.png"
+        },
+        "l2.5": {
+            "name": "l2.5",
+            "letter": "l2",
+            "word": "Лист",
+            "value": "soft",
+            "position": "504,769",
+            "folder": "Звук Л2",
+            "filename": "Лист.png"
+        },
+        "l2.6": {
+            "name": "l2.6",
+            "letter": "l2",
+            "word": "Лук",
+            "value": "strong",
+            "position": "504,0",
+            "folder": "Звук Л2",
+            "filename": "Лук.png"
+        },
+        "l2.7": {
+            "name": "l2.7",
+            "letter": "l2",
+            "word": "Самолет",
+            "value": "soft",
+            "position": "120,367",
+            "folder": "Звук Л2",
+            "filename": "Самолет.png"
+        },
+        "l2.8": {
+            "name": "l2.8",
+            "letter": "l2",
+            "word": "Шляпа",
+            "value": "soft",
+            "position": "693,439",
+            "folder": "Звук Л2",
+            "filename": "Шляпа.png"
+        },
+        "l2.9": {
+            "name": "l2.9",
+            "letter": "l2",
+            "word": "Юла",
+            "value": "strong",
+            "position": "0,705",
+            "folder": "Звук Л2",
+            "filename": "Юла.png"
+        },
+        "m.1": {
+            "name": "m.1",
+            "letter": "m",
+            "word": "Змея",
+            "value": "soft",
+            "position": "1407,526",
+            "folder": "Звук М",
+            "filename": "Змея.png"
+        },
+        "m.2": {
+            "name": "m.2",
+            "letter": "m",
+            "word": "Комар",
+            "value": "strong",
+            "position": "459,353",
+            "folder": "Звук М",
+            "filename": "Комар.png"
+        },
+        "m.3": {
+            "name": "m.3",
+            "letter": "m",
+            "word": "Матрешка",
+            "value": "strong",
+            "position": "1214,709",
+            "folder": "Звук М",
+            "filename": "Матрешка.png"
+        },
+        "m.4": {
+            "name": "m.4",
+            "letter": "m",
+            "word": "Медведь",
+            "value": "soft",
+            "position": "1214,20",
+            "folder": "Звук М",
+            "filename": "Медведь.png"
+        },
+        "m.5": {
+            "name": "m.5",
+            "letter": "m",
+            "word": "Морковь",
+            "value": "strong",
+            "position": "918,492",
+            "folder": "Звук М",
+            "filename": "Морковь.png"
+        },
+        "m.6": {
+            "name": "m.6",
+            "letter": "m",
+            "word": "Мышь",
+            "value": "strong",
+            "position": "605,0",
+            "folder": "Звук М",
+            "filename": "Мышь.png"
+        },
+        "m.7": {
+            "name": "m.7",
+            "letter": "m",
+            "word": "Мяч",
+            "value": "soft",
+            "position": "340,789",
+            "folder": "Звук М",
+            "filename": "Мяч.png"
+        },
+        "m.8": {
+            "name": "m.8",
+            "letter": "m",
+            "word": "Пирамидк",
+            "value": "soft",
+            "position": "326,38",
+            "folder": "Звук М",
+            "filename": "Пирамидк.png"
+        },
+        "m.9": {
+            "name": "m.9",
+            "letter": "m",
+            "word": "Помидор",
+            "value": "soft",
+            "position": "40,458",
+            "folder": "Звук М",
+            "filename": "Помидор.png"
+        },
+        "p.1": {
+            "name": "p.1",
+            "letter": "p",
+            "word": "Капуста",
+            "value": "strong",
+            "position": "1181,66",
+            "folder": "Звук П",
+            "filename": "Капуста.png"
+        },
+        "p.2": {
+            "name": "p.2",
+            "letter": "p",
+            "word": "Пароход",
+            "value": "strong",
+            "position": "306,20",
+            "folder": "Звук П",
+            "filename": "Пароход.png"
+        },
+        "p.3": {
+            "name": "p.3",
+            "letter": "p",
+            "word": "Пень",
+            "value": "soft",
+            "position": "1379,682",
+            "folder": "Звук П",
+            "filename": "Пень.png"
+        },
+        "p.4": {
+            "name": "p.4",
+            "letter": "p",
+            "word": "Перец",
+            "value": "soft",
+            "position": "515,487",
+            "folder": "Звук П",
+            "filename": "Перец.png"
+        },
+        "p.5": {
+            "name": "p.5",
+            "letter": "p",
+            "word": "Пирог",
+            "value": "soft",
+            "position": "985,476",
+            "folder": "Звук П",
+            "filename": "Пирог.png"
+        },
+        "p.6": {
+            "name": "p.6",
+            "letter": "p",
+            "word": "Платье",
+            "value": "strong",
+            "position": "85,583",
+            "folder": "Звук П",
+            "filename": "Платье.png"
+        },
+        "p.7": {
+            "name": "p.7",
+            "letter": "p",
+            "word": "Плюшки",
+            "value": "strong",
+            "position": "811,122",
+            "folder": "Звук П",
+            "filename": "Плюшки.png"
+        },
+        "p.8": {
+            "name": "p.8",
+            "letter": "p",
+            "word": "Помидор",
+            "value": "strong",
+            "position": "458,774",
+            "folder": "Звук П",
+            "filename": "Помидор.png"
+        },
+        "s.1": {
+            "name": "s.1",
+            "letter": "s",
+            "word": "Валисек",
+            "value": "soft",
+            "position": "908,453",
+            "folder": "Звук С",
+            "filename": "Валисек.png"
+        },
+        "s.2": {
+            "name": "s.2",
+            "letter": "s",
+            "word": "Велосипед",
+            "value": "soft",
+            "position": "473,732",
+            "folder": "Звук С",
+            "filename": "Велосипед.png"
+        },
+        "s.3": {
+            "name": "s.3",
+            "letter": "s",
+            "word": "Лиса",
+            "value": "strong",
+            "position": "415,33",
+            "folder": "Звук С",
+            "filename": "Лиса.png"
+        },
+        "s.4": {
+            "name": "s.4",
+            "letter": "s",
+            "word": "Слон",
+            "value": "strong",
+            "position": "1022,20",
+            "folder": "Звук С",
+            "filename": "Слон.png"
+        },
+        "s.5": {
+            "name": "s.5",
+            "letter": "s",
+            "word": "Собака",
+            "value": "strong",
+            "position": "1403,573",
+            "folder": "Звук С",
+            "filename": "Собака.png"
+        },
+        "s.6": {
+            "name": "s.6",
+            "letter": "s",
+            "word": "Стул",
+            "value": "strong",
+            "position": "153,482",
+            "folder": "Звук С",
+            "filename": "Стул.png"
+        }
+    }
+}
