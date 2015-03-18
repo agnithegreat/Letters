@@ -3,15 +3,26 @@
  */
 package view {
 import flash.display.Sprite;
+import flash.events.Event;
+import flash.geom.Rectangle;
 import flash.utils.Dictionary;
 
 public class GameScreen extends GameScreenMC {
 
     private var _container: Sprite;
 
+    private var _softCount: int;
+    private var _strongCount: int;
+
+    private var _softHitRect: Rectangle;
+    private var _strongHitRect: Rectangle;
+
     public function GameScreen() {
         _container = new Sprite();
         addChild(_container);
+
+        _softHitRect = boys.soft.getBounds(this);
+        _strongHitRect = boys.strong.getBounds(this);
     }
 
     public function init(imagesData: Array, imagesDict: Dictionary):void {
@@ -19,7 +30,30 @@ public class GameScreen extends GameScreenMC {
         for (var i: int = 0; i < l; i++) {
             var data: Object = imagesData[i];
             var image: ImageView = new ImageView(data, imagesDict[data.name]);
+            image.addEventListener(ImageView.CHECK, handleCheck);
             _container.addChild(image);
+        }
+
+        _softCount = 0;
+        _strongCount = 0;
+    }
+
+    private function handleCheck(e: Event):void {
+        var image: ImageView = e.currentTarget as ImageView;
+        if (_softHitRect.containsPoint(image.current)) {
+            if (image.data.value == "soft") {
+                image.accept(_softHitRect.x + _softHitRect.width/2, _softHitRect.height + 150 * (++_softCount));
+            } else {
+                image.decline();
+            }
+        } else if (_strongHitRect.containsPoint(image.current)) {
+            if (image.data.value == "strong") {
+                image.accept(_strongHitRect.x + _strongHitRect.width/2, _strongHitRect.height + 150 * (++_strongCount));
+            } else {
+                image.decline();
+            }
+        } else {
+            image.cancel();
         }
     }
 }
