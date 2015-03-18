@@ -15,10 +15,6 @@ public class Main extends MainBase {
     override protected function initialize():void {
         super.initialize();
 
-        var minScale: Number = Math.min(stage.stageWidth / 1920, stage.stageHeight / 1200);
-        scaleX = minScale;
-        scaleY = minScale;
-
         _app = new App();
         addChild(_app);
     }

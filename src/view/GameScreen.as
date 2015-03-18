@@ -26,6 +26,16 @@ public class GameScreen extends GameScreenMC {
     }
 
     public function init(imagesData: Array, imagesDict: Dictionary):void {
+        var xScale: Number = stage.stageWidth / 1920;
+        var yScale: Number = stage.stageHeight / 1200;
+        var minScale: Number = Math.min(xScale, yScale);
+        scaleX = minScale;
+        scaleY = minScale;
+
+        if (xScale > minScale) {
+            x = 960 * (xScale - minScale);
+        }
+
         var l: int = imagesData.length;
         for (var i: int = 0; i < l; i++) {
             var data: Object = imagesData[i];
@@ -42,13 +52,13 @@ public class GameScreen extends GameScreenMC {
         var image: ImageView = e.currentTarget as ImageView;
         if (_softHitRect.containsPoint(image.current)) {
             if (image.data.value == "soft") {
-                image.accept(_softHitRect.x + _softHitRect.width/2, _softHitRect.height + 150 * (++_softCount));
+                image.accept(_softHitRect.x + _softHitRect.width/2, 300 + 120 * (++_softCount));
             } else {
                 image.decline();
             }
         } else if (_strongHitRect.containsPoint(image.current)) {
             if (image.data.value == "strong") {
-                image.accept(_strongHitRect.x + _strongHitRect.width/2, _strongHitRect.height + 150 * (++_strongCount));
+                image.accept(_strongHitRect.x + _strongHitRect.width/2, 300 + 120 * (++_strongCount));
             } else {
                 image.decline();
             }
