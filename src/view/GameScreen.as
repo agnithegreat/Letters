@@ -26,15 +26,8 @@ public class GameScreen extends GameScreenMC {
     }
 
     public function init(imagesData: Array, imagesDict: Dictionary):void {
-        var xScale: Number = stage.stageWidth / 1920;
-        var yScale: Number = stage.stageHeight / 1200;
-        var minScale: Number = Math.min(xScale, yScale);
-        scaleX = minScale;
-        scaleY = minScale;
-
-        if (xScale > minScale) {
-            x = 960 * (xScale - minScale);
-        }
+        stage.addEventListener(Event.RESIZE, handleResize);
+        handleResize(null);
 
         var l: int = imagesData.length;
         for (var i: int = 0; i < l; i++) {
@@ -64,6 +57,18 @@ public class GameScreen extends GameScreenMC {
             }
         } else {
             image.cancel();
+        }
+    }
+
+    private function handleResize(e: Event):void {
+        var xScale: Number = stage.stageWidth / 1920;
+        var yScale: Number = stage.stageHeight / 1200;
+        var minScale: Number = Math.min(xScale, yScale);
+        scaleX = minScale;
+        scaleY = minScale;
+
+        if (xScale > minScale) {
+            x = 960 * (xScale - minScale);
         }
     }
 }

@@ -6,6 +6,7 @@ import flash.display.Bitmap;
 import flash.display.Loader;
 import flash.display.Sprite;
 import flash.events.Event;
+import flash.events.IOErrorEvent;
 import flash.net.URLLoader;
 import flash.net.URLRequest;
 import flash.utils.Dictionary;
@@ -65,13 +66,18 @@ public class App extends Sprite {
         }
 
         _imageLoader = new Loader();
+        _imageLoader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, handleIOError);
         _imageLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, handleImageLoaded);
         loadNext();
     }
 
+    private function handleIOError(e: IOErrorEvent):void {
+        trace(e);
+    }
+
     private function loadNext():void {
         if (_queue.length > 0) {
-            var path: String = "images/" + _queue[0].folder + "/" + _queue[0].filename;
+            var path: String = encodeURI("images/" + _queue[0].folder + "/" + _queue[0].filename);
 
             _imageLoader.load(new URLRequest(path));
         } else {

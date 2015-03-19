@@ -3,7 +3,7 @@
  */
 package {
 
-[SWF (frameRate=60, width=1920, height=1200)]
+[SWF (frameRate=60)]
 public class Main extends MainBase {
 
     private var _app: App;
