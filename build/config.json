@@ -1,5 +1,10 @@
 {
     "letters": {
+        "v": {
+            "name": "v",
+            "letter": "В",
+            "color": "#ea9999"
+        },
         "g": {
             "name": "g",
             "letter": "Г",
@@ -526,6 +531,87 @@
             "position": "153,482",
             "folder": "Звук С",
             "filename": "Стул.png"
+        },
+        "v.1": {
+            "name": "v.1",
+            "letter": "v",
+            "word": "Варешки",
+            "value": "strong",
+            "position": "335,23",
+            "folder": "Звук В",
+            "filename": "Варешки.png"
+        },
+        "v.2": {
+            "name": "v.2",
+            "letter": "v",
+            "word": "Ведро",
+            "value": "soft",
+            "position": "779,34",
+            "folder": "Звук В",
+            "filename": "Ведро.png"
+        },
+        "v.3": {
+            "name": "v.3",
+            "letter": "v",
+            "word": "Велосипед",
+            "value": "soft",
+            "position": "411,370",
+            "folder": "Звук В",
+            "filename": "Велосипед.png"
+        },
+        "v.4": {
+            "name": "v.4",
+            "letter": "v",
+            "word": "Верблюд",
+            "value": "soft",
+            "position": "1011,427",
+            "folder": "Звук В",
+            "filename": "Верблюд.png"
+        },
+        "v.5": {
+            "name": "v.5",
+            "letter": "v",
+            "word": "Виноград",
+            "value": "soft",
+            "position": "46,457",
+            "folder": "Звук В",
+            "filename": "Виноград.png"
+        },
+        "v.6": {
+            "name": "v.6",
+            "letter": "v",
+            "word": "Волк",
+            "value": "strong",
+            "position": "1338,767",
+            "folder": "Звук В",
+            "filename": "Волк.png"
+        },
+        "v.7": {
+            "name": "v.7",
+            "letter": "v",
+            "word": "Ворона",
+            "value": "strong",
+            "position": "1104,23",
+            "folder": "Звук В",
+            "filename": "Ворона.png"
+        },
+        "v.8": {
+            "name": "v.8",
+            "letter": "v",
+            "word": "Муравей",
+            "value": "soft",
+            "position": "128,883",
+            "folder": "Звук В",
+            "filename": "Муравей.png"
+        },
+        "v.9": {
+            "name": "v.9",
+            "letter": "v",
+            "word": "Слива",
+            "value": "strong",
+            "position": "639,733",
+            "folder": "Звук В",
+            "filename": "Слива.png"
         }
     }
 }

@@ -2,14 +2,21 @@
  * Created by desktop on 19.03.2015.
  */
 package view {
+import flash.display.SimpleButton;
+
 import flash.display.Sprite;
 import flash.events.Event;
+import flash.events.MouseEvent;
 import flash.geom.Rectangle;
 import flash.utils.Dictionary;
 
 public class GameScreen extends GameScreenMC {
 
+    public static const BACK: String = "back_GameScreen";
+
     private var _container: Sprite;
+
+    private var _backBtn: SimpleButton;
 
     private var _softCount: int;
     private var _strongCount: int;
@@ -18,6 +25,9 @@ public class GameScreen extends GameScreenMC {
     private var _strongHitRect: Rectangle;
 
     public function GameScreen() {
+        _backBtn = back_btn;
+        _backBtn.addEventListener(MouseEvent.CLICK, handleBackClick);
+
         _container = new Sprite();
         addChild(_container);
 
@@ -70,6 +80,32 @@ public class GameScreen extends GameScreenMC {
         if (xScale > minScale) {
             x = 960 * (xScale - minScale);
         }
+    }
+
+    private function handleBackClick(e: MouseEvent):void {
+        dispatchEvent(new Event(BACK));
+    }
+
+    public function destroy():void {
+        if (stage) {
+            stage.removeEventListener(Event.RESIZE, handleResize);
+        }
+
+        while (_container.numChildren > 0) {
+            var imageView: ImageView = _container.getChildAt(0) as ImageView;
+            imageView.removeEventListener(ImageView.CHECK, handleCheck);
+            imageView.destroy();
+            _container.removeChild(imageView);
+        }
+        removeChild(_container);
+        _container = null;
+
+        _backBtn.removeEventListener(MouseEvent.CLICK, handleBackClick);
+        removeChild(_backBtn);
+        _backBtn = null;
+
+        _softHitRect = null;
+        _strongHitRect = null;
     }
 }
 }

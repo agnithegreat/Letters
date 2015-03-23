@@ -104,8 +104,18 @@ public class App extends Sprite {
         removeChild(_main);
 
         _game = new GameScreen();
+        _game.addEventListener(GameScreen.BACK, handleBack);
         addChild(_game);
         _game.init(_lettersDict[letter], _imagesDict);
+    }
+
+    private function handleBack(e: Event):void {
+        _game.removeEventListener(GameScreen.BACK, handleBack);
+        _game.destroy();
+        removeChild(_game);
+        _game = null;
+
+        addChild(_main);
     }
 }
 }

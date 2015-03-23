@@ -92,18 +92,41 @@ public class ImageView extends Sprite {
     }
 
     private function handleMouseMove(e: MouseEvent):void {
-        _moveCurrent.x = parent.mouseX;
-        _moveCurrent.y = parent.mouseY;
+        if (stage) {
+            _moveCurrent.x = parent.mouseX;
+            _moveCurrent.y = parent.mouseY;
 
-        Tweener.removeTweens(this);
-        Tweener.addTween(this, {x: _position.x + _moveCurrent.x-_moveStart.x, y: _position.y + _moveCurrent.y-_moveStart.y, time: 0.1});
+            Tweener.removeTweens(this);
+            Tweener.addTween(this, {x: _position.x + _moveCurrent.x-_moveStart.x, y: _position.y + _moveCurrent.y-_moveStart.y, time: 0.1});
+        }
     }
 
     private function handleMouseUp(e: MouseEvent):void {
-        stage.removeEventListener(MouseEvent.MOUSE_MOVE, handleMouseMove);
-        stage.removeEventListener(MouseEvent.MOUSE_UP, handleMouseUp);
+        if (stage) {
+            stage.removeEventListener(MouseEvent.MOUSE_MOVE, handleMouseMove);
+            stage.removeEventListener(MouseEvent.MOUSE_UP, handleMouseUp);
 
-        dispatchEvent(new Event(CHECK));
+            dispatchEvent(new Event(CHECK));
+        }
+    }
+
+    public function destroy():void {
+        if (stage) {
+            stage.removeEventListener(MouseEvent.MOUSE_MOVE, handleMouseMove);
+            stage.removeEventListener(MouseEvent.MOUSE_UP, handleMouseUp);
+        }
+
+        _data = null;
+
+        removeChild(_bitmap);
+        _bitmap.bitmapData = null;
+        _bitmap = null;
+
+        _position = null;
+        _moveStart = null;
+        _moveCurrent = null;
+
+        removeEventListener(MouseEvent.MOUSE_DOWN, handleMouseDown);
     }
 }
 }
