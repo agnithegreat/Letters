@@ -35,7 +35,8 @@ public class App extends Sprite {
     public function App() {
         _configLoader = new URLLoader();
         _configLoader.addEventListener(Event.COMPLETE, handleConfigLoaded);
-        _configLoader.load(new URLRequest("config.json"));
+        _configLoader.addEventListener(IOErrorEvent.IO_ERROR, handleIOError);
+        _configLoader.load(new URLRequest(encodeURI("config.json")));
     }
 
     private function handleConfigLoaded(e: Event):void {
@@ -72,7 +73,7 @@ public class App extends Sprite {
     }
 
     private function handleIOError(e: IOErrorEvent):void {
-        trace(e);
+        trace(e.currentTarget, e);
     }
 
     private function loadNext():void {
