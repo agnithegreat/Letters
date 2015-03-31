@@ -11,10 +11,14 @@ import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.geom.Point;
+import flash.media.Sound;
 
 public class ImageView extends Sprite {
 
     public static const CHECK: String = "check_ImageView";
+
+    private static var soundRight: Sound = new RightSound();
+    private static var soundWrong: Sound = new WrongSound();
 
     private var _data: Object;
     public function get data():Object {
@@ -58,6 +62,8 @@ public class ImageView extends Sprite {
         removeEventListener(MouseEvent.MOUSE_DOWN, handleMouseDown);
         mouseEnabled = false;
         mouseChildren = false;
+
+        soundRight.play();
     }
 
     public function decline():void {
@@ -66,6 +72,8 @@ public class ImageView extends Sprite {
         Tweener.addTween(this, {scaleX: -1, time: 0.3, delay: 0.6});
         Tweener.addTween(this, {scaleX: 1, time: 0.3, delay: 0.9});
         updatePosition(true, 1.2);
+
+        soundWrong.play();
     }
 
     public function cancel():void {

@@ -13,6 +13,16 @@ public class MainScreen extends MainScreenMC {
     private function handleAddedToStage(e: Event):void {
         stage.addEventListener(Event.RESIZE, handleResize);
         handleResize(null);
+
+        removeEventListener(Event.ADDED_TO_STAGE, handleAddedToStage);
+        addEventListener(Event.REMOVED_FROM_STAGE, handleRemovedFromStage);
+    }
+
+    private function handleRemovedFromStage(e: Event):void {
+        stage.removeEventListener(Event.RESIZE, handleResize);
+
+        removeEventListener(Event.REMOVED_FROM_STAGE, handleRemovedFromStage);
+        addEventListener(Event.ADDED_TO_STAGE, handleAddedToStage);
     }
 
     private function handleResize(e: Event):void {

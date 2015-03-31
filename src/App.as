@@ -10,9 +10,12 @@ import flash.events.IOErrorEvent;
 import flash.net.URLLoader;
 import flash.net.URLRequest;
 import flash.utils.Dictionary;
+import flash.utils.setTimeout;
 
 import view.GameScreen;
+import view.InfoScreen;
 import view.LetterView;
+import view.MainMenuScreen;
 import view.MainScreen;
 import view.SelectLetterScreen;
 
@@ -31,12 +34,18 @@ public class App extends Sprite {
     private var _imageLoader: Loader;
 
     private var _main: MainScreen;
+    private var _menu: MainMenuScreen
+    private var _info: InfoScreen;
     private var _select: SelectLetterScreen;
     private var _game: GameScreen;
+
+    private var _readyToStart: Boolean;
 
     public function App() {
         _main = new MainScreen();
         addChild(_main);
+
+        setTimeout(start, 3000);
 
         _configLoader = new URLLoader();
         _configLoader.addEventListener(Event.COMPLETE, handleConfigLoaded);
@@ -87,12 +96,7 @@ public class App extends Sprite {
 
             _imageLoader.load(new URLRequest(path));
         } else {
-            removeChild(_main);
-
-            _select = new SelectLetterScreen();
-            addChild(_select);
-            _select.addEventListener(LetterView.CLICK, handleClick);
-            _select.init(_lettersArray);
+            start();
         }
     }
 
@@ -105,6 +109,45 @@ public class App extends Sprite {
         _imagesDict[_queue[0].name] = Bitmap(_imageLoader.content).bitmapData;
         _queue.shift();
         loadNext();
+    }
+
+    private function start():void {
+        if (_readyToStart) {
+            removeChild(_main);
+
+            if (!_menu) {
+                _menu = new MainMenuScreen();
+                _menu.addEventListener(MainMenuScreen.INFO, showInfo);
+                _menu.addEventListener(MainMenuScreen.SELECT, showLetters);
+            }
+            addChild(_menu);
+        } else {
+            _readyToStart = true;
+        }
+    }
+
+    private function showInfo(e: Event):void {
+        removeChild(_menu);
+
+        if (!_info) {
+            _info = new InfoScreen();
+            _info.addEventListener(InfoScreen.BACK, handleBackToMainMenu);
+        }
+        addChild(_info);
+    }
+
+    private function handleBackToMainMenu(e: Event):void {
+        removeChild(_info);
+        addChild(_menu);
+    }
+
+    private function showLetters(e: Event):void {
+        removeChild(_menu);
+
+        _select = new SelectLetterScreen();
+        addChild(_select);
+        _select.addEventListener(LetterView.CLICK, handleClick);
+        _select.init(_lettersArray);
     }
 
     private function initGame(letter: String):void {
