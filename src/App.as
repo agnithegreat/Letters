@@ -147,7 +147,13 @@ public class App extends Sprite {
         _select = new SelectLetterScreen();
         addChild(_select);
         _select.addEventListener(LetterView.CLICK, handleClick);
+        _select.addEventListener(SelectLetterScreen.BACK, handleBackToMenu);
         _select.init(_lettersArray);
+    }
+
+    private function handleBackToMenu(e: Event):void {
+        removeChild(_select);
+        addChild(_menu);
     }
 
     private function initGame(letter: String):void {
