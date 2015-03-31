@@ -564,7 +564,7 @@
             "letter": "v",
             "word": "Верблюд",
             "value": "soft",
-            "position": "1011,427",
+            "position": "911,397",
             "folder": "Звук В",
             "filename": "Верблюд.png"
         },
@@ -591,14 +591,14 @@
             "letter": "v",
             "word": "Ворона",
             "value": "strong",
-            "position": "1104,23",
+            "position": "1104,123",
             "folder": "Звук В",
             "filename": "Ворона.png"
         },
         "v.8": {
             "name": "v.8",
             "letter": "v",
-            "word": "Муравей",
+            "word": "Муравей",
             "value": "soft",
             "position": "128,883",
             "folder": "Звук В",
@@ -612,6 +612,30 @@
             "position": "639,733",
             "folder": "Звук В",
             "filename": "Слива.png"
+        },
+        "v.10": {
+            "name": "v.10",
+            "letter": "v",
+            "word": "Апельсин",
+            "position": "1075,-101",
+            "folder": "Звук В",
+            "filename": "Апельсин.png"
+        },
+        "v.11": {
+            "name": "v.11",
+            "letter": "v",
+            "word": "Груша",
+            "position": "1023,817",
+            "folder": "Звук В",
+            "filename": "Груша.png"
+        },
+        "v.12": {
+            "name": "v.12",
+            "letter": "v",
+            "word": "Яблоко",
+            "position": "1543,452",
+            "folder": "Звук В",
+            "filename": "Яблоко.png"
         }
     }
 }
