@@ -17,7 +17,7 @@ public class LetterView extends LetterMC {
     public function LetterView(data: Object) {
         _data = data;
 
-        letter.text = _data.letter;
+        letter.text = letter.text.replace("*", _data.letter).replace("*", _data.letter);
         letter.textColor = _data.color.replace("#", "0x");
 
         addEventListener(MouseEvent.CLICK, handleClick);

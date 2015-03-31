@@ -13,7 +13,8 @@ import flash.utils.Dictionary;
 
 import view.GameScreen;
 import view.LetterView;
-import view.MainMenu;
+import view.MainScreen;
+import view.SelectLetterScreen;
 
 public class App extends Sprite {
 
@@ -29,10 +30,14 @@ public class App extends Sprite {
     private var _configLoader: URLLoader;
     private var _imageLoader: Loader;
 
-    private var _main: MainMenu;
+    private var _main: MainScreen;
+    private var _select: SelectLetterScreen;
     private var _game: GameScreen;
 
     public function App() {
+        _main = new MainScreen();
+        addChild(_main);
+
         _configLoader = new URLLoader();
         _configLoader.addEventListener(Event.COMPLETE, handleConfigLoaded);
         _configLoader.addEventListener(IOErrorEvent.IO_ERROR, handleIOError);
@@ -82,10 +87,12 @@ public class App extends Sprite {
 
             _imageLoader.load(new URLRequest(path));
         } else {
-            _main = new MainMenu();
-            addChild(_main);
-            _main.addEventListener(LetterView.CLICK, handleClick);
-            _main.init(_lettersArray);
+            removeChild(_main);
+
+            _select = new SelectLetterScreen();
+            addChild(_select);
+            _select.addEventListener(LetterView.CLICK, handleClick);
+            _select.init(_lettersArray);
         }
     }
 
@@ -101,7 +108,7 @@ public class App extends Sprite {
     }
 
     private function initGame(letter: String):void {
-        removeChild(_main);
+        removeChild(_select);
 
         _game = new GameScreen();
         _game.addEventListener(GameScreen.BACK, handleBack);
@@ -115,7 +122,7 @@ public class App extends Sprite {
         removeChild(_game);
         _game = null;
 
-        addChild(_main);
+        addChild(_select);
     }
 }
 }
